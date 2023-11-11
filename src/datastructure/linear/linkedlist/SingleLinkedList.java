@@ -32,6 +32,12 @@ public class SingleLinkedList {
     }
 
     public void printLinkedList() {
+
+        if (this.head.next == null) {
+            System.out.print("Head: " + this.head.data);
+            return;
+        }
+
         System.out.print("Head: " + this.head.data);
         Node temp = this.head.next;
         while (temp.next != null) {
