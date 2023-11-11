@@ -16,6 +16,5 @@ public class StackMain {
         myStack.printLinkedList();
 
         System.out.println(myStack.isEmpty());
-
     }
 }
