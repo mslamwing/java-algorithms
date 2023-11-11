@@ -1,5 +1,6 @@
 package datastructure.linear.linkedlist;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -22,21 +23,19 @@ public class Main {
         integerArrayList.add(4);
         integerArrayList.remove(2);
 
-        System.out.println(integerLinkedList);
-        System.out.println(integerArrayList);
+//        System.out.println(integerLinkedList);
+//        System.out.println(integerArrayList);
 
-        Node head = new Node(1);
-        Node node2 = new Node(2);
-        Node tailNode = new Node(3);
+        SingleLinkedList s1 = new SingleLinkedList(1);
 
-        head.next = node2;
-        node2.next = tailNode;
+        s1.insert(2 );
+        s1.insert(100);
+        s1.insert(5);
+        s1.insert(94);
+        s1.insert(200);
 
-        Node temporaryNode = head;
-        System.out.println(temporaryNode.data);
-        while (temporaryNode.next != null) {
-            temporaryNode = temporaryNode.next;
-            System.out.println(temporaryNode.data);
-        }
+//        s1.deleteLast();
+
+        s1.printLinkedList();
     }
 }
