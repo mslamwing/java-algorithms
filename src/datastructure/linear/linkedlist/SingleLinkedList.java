@@ -2,13 +2,16 @@ package datastructure.linear.linkedlist;
 
 public class SingleLinkedList {
 
-    public Node head;
+    protected Node head;
 
-    public SingleLinkedList(int headData) {
-        this.head = new Node(headData);
-    }
+    public SingleLinkedList() {}
 
-    public void insert( int newData ){
+    public void insertLast( int newData ){
+
+        if (this.head == null) {
+            this.head = new Node(newData);
+        }
+
         Node temp = this.head;
         while ( temp.next != null) {
             temp = temp.next;
