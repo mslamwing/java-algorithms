@@ -43,6 +43,7 @@ public class Queue extends SingleLinkedList {
         return this.head == null;
     }
 
+    // garbage collection happens later to delete dangling Node objects
     public void clear() {
         if (this.head != null) {
             this.head = null;
