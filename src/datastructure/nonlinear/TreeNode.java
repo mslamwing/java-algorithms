@@ -1,11 +1,11 @@
 package datastructure.nonlinear;
 
-public class Node {
+public class TreeNode {
     public int data;
-    protected Node left;
-    protected Node right;
+    public TreeNode left;
+    public TreeNode right;
     // constructor initialize
-    public Node (int data){
+    public TreeNode(int data){
         this.data = data;
         this.left = null;
         this.right = null;

@@ -2,16 +2,29 @@ package datastructure.linear.linkedlist;
 
 public class SingleLinkedList {
 
+    //instance variable head of type Node that created earlier, currently null
     protected Node head;
+    protected Node tail;
 
+    //default constructor doesn't have body
     public SingleLinkedList() {}
 
+    //JavaDoc type /** then enter
+    /**
+     * this function inserts new Node with newData as data towards the end of the linked list
+     * @param newData
+     */
     public void insertLast( int newData ){
 
+        // check if head is null or not; if null linked list is empty nothing there
+        // if not null, which means head got instantiated (eg. new Node(5)) earlier and linked list has at least one element
+        // then goto line 26
         if (this.head == null) {
             this.head = new Node(newData);
+            return;
         }
 
+        //create a temp variable of type head that refers to actual this.head
         Node temp = this.head;
         while ( temp.next != null) {
             temp = temp.next;
@@ -45,6 +58,20 @@ public class SingleLinkedList {
             temp = temp.next;
         }
         System.out.println(" -> " + temp.data + " -> null");
+    }
+
+    public int getSize() {
+        int count = 0;
+
+        if (this.head == null) {
+            return count;
+        }
+
+        for (Node start = this.head; start != null; start = start.next) {
+            count++;
+        }
+
+        return count;
     }
 }
 

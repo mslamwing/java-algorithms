@@ -1,7 +1,7 @@
 package datastructure.nonlinear;
 
 public class Traversal {
-    public static void preOrderTraversal(Node n){
+    public static void preOrderTraversal(TreeNode n){
         if (n == null){
             return ;
         }
@@ -10,7 +10,7 @@ public class Traversal {
         preOrderTraversal(n.right);
     }
 
-    public static void postOrderTraversal(Node n){
+    public static void postOrderTraversal(TreeNode n){
         if (n == null){
             return ;
         }
@@ -20,7 +20,7 @@ public class Traversal {
 
     }
 
-    public static void inOrderTraversal(Node n){
+    public static void inOrderTraversal(TreeNode n){
         if (n == null){
             return ;
         }
@@ -30,9 +30,9 @@ public class Traversal {
 
     }
     public static void main(String[] args){
-        Node root = new Node(5);
-        root.left = new Node(1);
-        root.right = new Node(2);
+        TreeNode root = new TreeNode(5);
+        root.left = new TreeNode(1);
+        root.right = new TreeNode(2);
 
         preOrderTraversal(root);
     }
